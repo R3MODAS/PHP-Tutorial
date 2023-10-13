@@ -1,0 +1,65 @@
+1. Use of PHP
+----------------
+PHP is a general purpose dynamically typed scripting language which is created by Rasmus Lerdorf in 1994. PHP is written inside html and we can dynamically generate content on different request and send diff response accordingly to the client/user.
+
+2. What is Apache ?
+--------------------
+Apache is a web server that helps to serve websites using http/https protocol. It handles the request and gives response on the request made by the client.
+
+3. More about PHP
+------------------
+Syntax of PHP ---> <?php echo "Hello world"; //php code is written inside this opening and closing tags ?>
+
+<?php : Opening Tag
+?> : Closing Tag 
+semicolon is required to terminate statements
+
+php can be written in blocks as per our need so we can write logics on different blocks
+
+*** We cannot see php in client side as the php is being executed in the server and then it is sent back as response to the client ***
+
+4. Comments in PHP
+-------------------
+// Single Line Comment
+/* 
+    Multi
+    Line
+    Comment
+*/
+
+The full form of PHP is Hypertext Preprocessor
+
+5. Variables in PHP
+--------------------
+Variables are container that contains some information of different type.
+Starts with a $ and they are case sensitive. It is a loosely typed language.
+
+Eg : 
+----
+$name = "Remo";
+$age = 23;
+echo "Hello, I am $name and I am $age years old" ;
+
+<br> to provide newline
+
+6. Datatypes in PHP
+-------------------
+String, Integer, Float, Boolean, Object, Array, NULL
+
+String -> Sequence of Characters
+Integer -> Non decimal number
+Float -> Decimal number
+Boolean -> True or False
+
+*** We should use var_dump() function to find the type of value and exact value of the Variable ***
+
+*** var_dump(variable) ***
+
+Object -> Instances of classes
+Employee is a class where Remo is one object
+
+Array -> Store multiple values in a single variable
+$arr = [10,20,30];
+
+Null -> No value just blank
+$blank = null;
