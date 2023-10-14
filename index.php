@@ -23,7 +23,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="./">PHP</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -53,6 +53,9 @@
         </li>
         <li>
             <a href="./03_String_Functions.php">String Functions in PHP</a>
+        </li>
+        <li>
+            <a href="./04_Operators.php">Operators in PHP</a>
         </li>
     </ul>
 

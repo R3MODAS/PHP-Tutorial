@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>String Functions in PHP</title>
+    <title>Operators in PHP</title>
     <style>
         h1 {
             font-size: 1.7rem;
@@ -38,27 +38,47 @@
     </nav>
 
     <div class="container mt-4">
-        <h1>String Functions in PHP</h1>
-
-        <!-- *** <br> to provide newline as there is a html parser in our browser and it takes any text in the form of html *** -->
+        <h1>Operators in PHP</h1>
 
         <?php
-        $name = "Remo is a Web Developer";
-        echo "String -> '$name'";
+        $a = 10;
+        $b = 6;
+
+        // Arithmetic Operators
+        echo "Result of a + b -> " . ($a + $b) . "<br>";
+        echo "Result of a - b -> " . ($a - $b) . "<br>";
+        echo "Result of a * b -> " . ($a * $b) . "<br>";
+        echo "Result of a / b -> " . ($a / $b) . "<br>";
+        echo "Result of a % b -> " . ($a % $b) . "<br>";
+        echo "Result of a ** b -> " . ($a ** $b) . "<br>";
+        echo "<br><br>";
+
+        // Assignment Operators
+        $x = $a;
+        echo "Value of x (before) -> " . $x . "<br>";
+        $x += 10;
+        echo "Value of x (after) -> " . $x  . "<br>";
+        echo "<br><br>";
+
+        // Comparison Operators
+        $num1 = 10;
+        $num2 = 20;
+        echo "Equals Operator -> ";
+        echo var_dump($num1 == $num2);
         echo "<br>";
-        echo "Length of the string -> " . strlen($name);
+        echo "Not Equals Operator -> ";
+        echo var_dump($num1 <> $num2);
+        echo "<br><br>";
+        
+        // Logical Operators
+        $val1 = true;
+        $val2 = false;
+        echo "Result -> ";
+        echo var_dump($val1 and $val2);
+        echo var_dump($val1 or $val2);
+        echo var_dump(!$val1);
         echo "<br>";
-        echo "Number of words -> " . str_word_count($name);
-        echo "<br>";
-        echo "Reverse of the string -> " . strrev($name);
-        echo "<br>";
-        echo "Position of the string is -> ".strpos($name, "is");
-        echo "<br>";
-        echo "Replaced string is -> ".str_replace("Remo", "Rimo", $name);
-        echo "<br>";
-        echo "Repeat the string -> ".str_repeat($name, 3);
-        echo "<br>";
-        echo "Trimmed string -> ".trim("    remo      ");
+
         ?>
 
     </div>

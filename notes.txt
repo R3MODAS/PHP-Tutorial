@@ -40,7 +40,7 @@ $name = "Remo";
 $age = 23;
 echo "Hello, I am $name and I am $age years old" ;
 
-<br> to provide newline
+*** <br> to provide newline as there is a html parser in our browser and it takes any text in the form of html ***
 
 6. Datatypes in PHP
 -------------------
@@ -63,3 +63,20 @@ $arr = [10,20,30];
 
 Null -> No value just blank
 $blank = null;
+
+
+7. String Functions in PHP
+---------------------------
+To join a string we can use dot (.) operator.
+
+strlen(string) -> Gives the length of the string.
+str_word_count(string) -> Gives the Number of words in a string.
+strrev(string) -> Reverse a string.
+strpos() -> Returns the position of the string.
+str_replace(orginal,changed,string) -> Replaces a substring inside the string.
+str_repeat(string,no_of_times_to_repeat) -> Repeats a string.
+trim(string) -> To remove whitespaces from a string.
+
+8. Operators in PHP
+---------------------
+Operators -> Arithmetic, Assignment, Comparison, Logical
