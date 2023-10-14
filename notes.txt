@@ -80,3 +80,33 @@ trim(string) -> To remove whitespaces from a string.
 8. Operators in PHP
 ---------------------
 Operators -> Arithmetic, Assignment, Comparison, Logical
+
+9. Loops in PHP
+----------------
+if-else, if-else-elseif, switch-case, while, do-while, for, foreach.
+
+foreach is used for array and objects.
+
+Example : 
+--------
+foreach(arrvariable as define_a_variable) {
+    // use that variable you defined here to get all the values which were inside the array.
+}
+
+$arr = ["Remo","Rohan","Khushi"];
+foreach($arr as $value){
+    echo $value;
+}
+
+10. Functions in PHP
+---------------------
+Piece of code that can be reused as many times as we want just by defining it and calling it whenever we need it.
+
+11. Dates in PHP
+----------------
+date("") -> we have to provide strings to check date related values such as current date, time, get all of the info (date and time)
+
+date_default_timezone_set() -> It is used to set the current timezone we are in and sets the date and time according to it
+
+12. Associative Arrays in PHP
+------------------------------

@@ -38,7 +38,7 @@
     </nav>
 
     <div class="container mt-4">
-        <h1>String Functions in PHP</h1>
+        <h1 class="fw-bolder">String Functions in PHP</h1>
 
         <!-- *** <br> to provide newline as there is a html parser in our browser and it takes any text in the form of html *** -->
 

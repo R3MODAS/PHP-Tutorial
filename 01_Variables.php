@@ -38,7 +38,7 @@
     </nav>
 
     <div class="container mt-4">
-        <h1>Variables in PHP</h1>
+        <h1 class="fw-bolder">Variables in PHP</h1>
         <ul>
             <li>Starts with a $ sign</li>
             <li>Cannot start with a Number</li>

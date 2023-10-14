@@ -10,7 +10,7 @@
     </title>
     <style>
         .heading {
-            font-size: 2.5rem;
+            font-size: 2rem;
         }
 
         .sub-heading {
@@ -43,7 +43,7 @@
         </div>
     </nav>
 
-    <h1 class="heading text-center fw-bolder pb-4">Welcome to PHP Tutorial</h1>
+    <h1 class="heading text-center fw-bolder pb-4 pt-3">Welcome to PHP Tutorial</h1>
     <ul>
         <li>
             <a href="./01_Variables.php">Variables in PHP</a>
@@ -56,6 +56,15 @@
         </li>
         <li>
             <a href="./04_Operators.php">Operators in PHP</a>
+        </li>
+        <li>
+            <a href="./05_Loops.php">Loops in PHP</a>
+        </li>
+        <li>
+            <a href="./06_Functions.php">Functions in PHP</a>
+        </li>
+        <li>
+            <a href="./07_Dates.php">Dates in PHP</a>
         </li>
     </ul>
 

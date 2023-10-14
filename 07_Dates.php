@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>Datatypes in PHP</title>
+    <title>Dates in PHP</title>
     <style>
         h1 {
             font-size: 1.7rem;
@@ -38,34 +38,20 @@
     </nav>
 
     <div class="container mt-4">
-        <h1 class="fw-bolder">Datatypes in PHP</h1>
+        <h1 class="fw-bolder">Dates in PHP</h1>
 
         <?php
-        $name = "Remo"; // string
-        $income = 400; // integer
-        $deciNum = 50.50; // float
-        $isHungry = true; // boolean
-        $arr = array(10, 20, "Remo", true); // array
-        $blank = null;
-        echo "String -> $name";
-        echo "<br>";
-        echo "Integer -> $income";
-        echo "<br>";
-        echo "Float -> $deciNum";
-        echo "<br>";
-        echo "Boolean -> ";
-        echo var_dump($isHungry);
-        echo "<br>";
-        echo "Array ->";
-        echo var_dump($arr);
-        echo "<br>";
-        echo "Accessing the Index of Array 0th position -> ";
-        echo var_dump($arr[0]);
-        echo "<br>";
-        echo "Null -> ";
-        echo var_dump($blank);
+        $tz = 'Asia/Kolkata';
+        date_default_timezone_set($tz);
+        $d = date("dS F Y");
+        $t = date("H:i A");
+        $all = date("r");
+        $timezone = date("e");
+        echo "Timezone is -> " . $timezone . "<br>";
+        echo "Today's Date -> " . $d . "<br>";
+        echo "Today's Time -> " . $t . "<br>";
+        echo "Today's Date and Time -> " . $all . "<br>";
         ?>
-
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

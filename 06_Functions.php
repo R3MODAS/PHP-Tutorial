@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>Datatypes in PHP</title>
+    <title>Functions in PHP</title>
     <style>
         h1 {
             font-size: 1.7rem;
@@ -38,34 +38,30 @@
     </nav>
 
     <div class="container mt-4">
-        <h1 class="fw-bolder">Datatypes in PHP</h1>
+        <h1 class="fw-bolder">Functions in PHP</h1>
 
         <?php
-        $name = "Remo"; // string
-        $income = 400; // integer
-        $deciNum = 50.50; // float
-        $isHungry = true; // boolean
-        $arr = array(10, 20, "Remo", true); // array
-        $blank = null;
-        echo "String -> $name";
-        echo "<br>";
-        echo "Integer -> $income";
-        echo "<br>";
-        echo "Float -> $deciNum";
-        echo "<br>";
-        echo "Boolean -> ";
-        echo var_dump($isHungry);
-        echo "<br>";
-        echo "Array ->";
-        echo var_dump($arr);
-        echo "<br>";
-        echo "Accessing the Index of Array 0th position -> ";
-        echo var_dump($arr[0]);
-        echo "<br>";
-        echo "Null -> ";
-        echo var_dump($blank);
-        ?>
+        // Functions
+        function getAvgMarks($marksArr)
+        {
+            $avg = 0;
+            foreach ($marksArr as $marks) {
+                $avg += $marks;
+            }
+            echo "Average of 5 students is " . $avg / count($marksArr) . "<br>";
+        }
 
+        function sum($a, $b)
+        {
+            echo "Sum of a and b is " . ($a + $b) . "<br>";
+        }
+
+        $marksArr = array(10, 20, 30, 40, 50);
+        getAvgMarks($marksArr);
+        sum(10, 20);
+
+
+        ?>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

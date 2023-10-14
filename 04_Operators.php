@@ -38,7 +38,7 @@
     </nav>
 
     <div class="container mt-4">
-        <h1>Operators in PHP</h1>
+        <h1 class="fw-bolder">Operators in PHP</h1>
 
         <?php
         $a = 10;
