@@ -150,3 +150,16 @@ Variables defined inside a function are local scoped variables.
 We can access the global variables inside the function by using global keyword and it converts the current local variable to global and also the changes done to that global variable will be affected for global scope (All over permanent change).
 
 All the global variables are stored in an Array known as $GLOBALS which is an array which has keys and values.
+
+15. GET and POST methods in PHP
+--------------------------------
+When the user fills out the form and clicks the submit button, the form data is sent for processing to a PHP file named "form.php". The form data is sent with the HTTP POST method.
+
+$_SERVER["REQUEST_METHOD"] -> Gives the Request we made (POST,GET,etc)
+$_POST / $_GET -> Superglobal variables which holds some global values
+
+Provide the name attribute to the input fields to access the values submitted :
+<input type="email" name = "email">
+<input type="password" name = "password">
+
+$_POST["email"] $_POST["password"] to get the global values once we submit the form using POST method.
