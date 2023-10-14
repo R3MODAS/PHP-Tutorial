@@ -110,3 +110,43 @@ date_default_timezone_set() -> It is used to set the current timezone we are in 
 
 12. Associative Arrays in PHP
 ------------------------------
+Arrays such as array(10,20,30) are known as numeric/indexed arrays as they have index as keys.
+
+Arrays which has key and value are known as Associative arrays.
+Ex : array("Remo" => "Drums", "Harsh" => "Piano")
+
+now use foreach($arr as $key => $value){
+    // print the key and value of each array item
+}
+
+13. Multi Dimensional Arrays in PHP
+------------------------------------
+We can make Multi dim array like this (Matrix)
+$arr = array(
+    array(0,1,2,3),
+    array(4,5,6,7),
+    array(8,9,10,11),
+)
+
+first we get the number of rows in the array 
+---------------------------------------------
+for($i = 0; $i < count($arr); $i++)
+
+then we need get the index of values inside the array we accessed 
+------------------------------------------------------------------
+for($i = 0; $i < count($arr); $i++){
+    for($j = 0; $j < count($arr[$i]); $i++){
+        echo $arr[$i][$j];
+        echo " ";
+    }
+    echo "<br>";
+}
+
+14. Scope of Variables
+----------------------
+Variables defined outside the function are global scoped variables.
+Variables defined inside a function are local scoped variables.
+
+We can access the global variables inside the function by using global keyword and it converts the current local variable to global and also the changes done to that global variable will be affected for global scope (All over permanent change).
+
+All the global variables are stored in an Array known as $GLOBALS which is an array which has keys and values.

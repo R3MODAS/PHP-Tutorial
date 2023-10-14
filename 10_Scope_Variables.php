@@ -5,16 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>
-        <?php echo "PHP Tutorial" ?>
-    </title>
+    <title>Scope of Variables in PHP</title>
     <style>
-        .heading {
-            font-size: 2rem;
-        }
-
-        .sub-heading {
-            font-size: 1.5rem;
+        h1 {
+            font-size: 1.7rem;
         }
     </style>
 </head>
@@ -43,42 +37,30 @@
         </div>
     </nav>
 
-    <h1 class="heading text-center fw-bolder pb-4 pt-3">Welcome to PHP Tutorial</h1>
-    <ul>
-        <li>
-            <a href="./01_Variables.php">Variables in PHP</a>
-        </li>
-        <li>
-            <a href="./02_Datatypes.php">Data Types in PHP</a>
-        </li>
-        <li>
-            <a href="./03_String_Functions.php">String Functions in PHP</a>
-        </li>
-        <li>
-            <a href="./04_Operators.php">Operators in PHP</a>
-        </li>
-        <li>
-            <a href="./05_Loops.php">Loops in PHP</a>
-        </li>
-        <li>
-            <a href="./06_Functions.php">Functions in PHP</a>
-        </li>
-        <li>
-            <a href="./07_Dates.php">Dates in PHP</a>
-        </li>
-        <li>
-            <a href="./08_Array.php">Array in PHP</a>
-        </li>
-        <li>
-            <a href="./09_Multi_Dim_Array.php">Multi Dimensional Array in PHP</a>
-        </li>
-        <li>
-            <a href="./10_Scope_Variables.php">Scope of Variables in PHP</a>
-        </li>
-        <li>
-            <a href="./11_GET_POST.php">GET and POST Requests in PHP</a>
-        </li>
-    </ul>
+    <div class="container mt-4">
+        <h1 class="fw-bolder">Scope of Variables in PHP</h1>
+
+        <?php
+            $a = 10; // Global
+
+            function printValue(){
+                // $a = 20; // Local
+                global $a; // Gives the access to the global variable
+                echo "Local Scoped Value is $a <br>";
+                $a = 100;
+                echo "Changed Global Value -> $a <br>";
+            }
+
+            echo "Global Scoped Value is $a <br>";
+            printValue();
+            echo "Changed Value is $a <br>";
+
+            echo var_dump($GLOBALS) . "<br>"; // Gets the Global Variables
+            echo "Value of Global Variable we defined -> ";
+            echo var_dump($GLOBALS["a"]);
+
+        ?>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>

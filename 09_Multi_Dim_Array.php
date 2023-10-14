@@ -5,16 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>
-        <?php echo "PHP Tutorial" ?>
-    </title>
+    <title>Multi Dimensional Array in PHP</title>
     <style>
-        .heading {
-            font-size: 2rem;
-        }
-
-        .sub-heading {
-            font-size: 1.5rem;
+        h1 {
+            font-size: 1.7rem;
         }
     </style>
 </head>
@@ -43,42 +37,44 @@
         </div>
     </nav>
 
-    <h1 class="heading text-center fw-bolder pb-4 pt-3">Welcome to PHP Tutorial</h1>
-    <ul>
-        <li>
-            <a href="./01_Variables.php">Variables in PHP</a>
-        </li>
-        <li>
-            <a href="./02_Datatypes.php">Data Types in PHP</a>
-        </li>
-        <li>
-            <a href="./03_String_Functions.php">String Functions in PHP</a>
-        </li>
-        <li>
-            <a href="./04_Operators.php">Operators in PHP</a>
-        </li>
-        <li>
-            <a href="./05_Loops.php">Loops in PHP</a>
-        </li>
-        <li>
-            <a href="./06_Functions.php">Functions in PHP</a>
-        </li>
-        <li>
-            <a href="./07_Dates.php">Dates in PHP</a>
-        </li>
-        <li>
-            <a href="./08_Array.php">Array in PHP</a>
-        </li>
-        <li>
-            <a href="./09_Multi_Dim_Array.php">Multi Dimensional Array in PHP</a>
-        </li>
-        <li>
-            <a href="./10_Scope_Variables.php">Scope of Variables in PHP</a>
-        </li>
-        <li>
-            <a href="./11_GET_POST.php">GET and POST Requests in PHP</a>
-        </li>
-    </ul>
+    <div class="container mt-4">
+        <h1 class="fw-bolder">Multi Dimensional Array in PHP</h1>
+
+        <?php
+        // 2 Dimensional Array
+        $multiDim = array(
+            array(2, 5, 7, 8),
+            array(1, 2, 3, 1),
+        );
+
+        // 3 Dimensional Array
+        $threeDim = array(array(
+            array(2, 5, 7, 8),
+            array(1, 2, 3, 1),
+            array(4, 5, 0, 1),
+        ));
+
+        for ($i = 0; $i < count($multiDim); $i++) {
+            for ($j = 0; $j < count($multiDim[$i]); $j++) {
+                echo $multiDim[$i][$j];
+                echo " ";
+            }
+            echo "<br>";
+        }
+        echo "<br>";
+
+        for ($i = 0; $i < count($threeDim); $i++) {
+            for ($j = 0; $j < count($threeDim[$i]); $j++) {
+                for ($k = 0; $k < count($threeDim[$i][$j]); $k++) {
+                    echo $threeDim[$i][$j][$k];
+                    echo " ";
+                }
+                echo "<br>";
+            }   
+        }
+
+        ?>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
