@@ -2,9 +2,11 @@
 ----------------
 PHP is a general purpose dynamically typed scripting language which is created by Rasmus Lerdorf in 1994. PHP is written inside html and we can dynamically generate content on different request and send diff response accordingly to the client/user.
 
+
 2. What is Apache ?
 --------------------
 Apache is a web server that helps to serve websites using http/https protocol. It handles the request and gives response on the request made by the client.
+
 
 3. More about PHP
 ------------------
@@ -18,6 +20,7 @@ php can be written in blocks as per our need so we can write logics on different
 
 *** We cannot see php in client side as the php is being executed in the server and then it is sent back as response to the client ***
 
+
 4. Comments in PHP
 -------------------
 // Single Line Comment
@@ -28,6 +31,7 @@ php can be written in blocks as per our need so we can write logics on different
 */
 
 The full form of PHP is Hypertext Preprocessor
+
 
 5. Variables in PHP
 --------------------
@@ -41,6 +45,7 @@ $age = 23;
 echo "Hello, I am $name and I am $age years old" ;
 
 *** <br> to provide newline as there is a html parser in our browser and it takes any text in the form of html ***
+
 
 6. Datatypes in PHP
 -------------------
@@ -77,9 +82,11 @@ str_replace(orginal,changed,string) -> Replaces a substring inside the string.
 str_repeat(string,no_of_times_to_repeat) -> Repeats a string.
 trim(string) -> To remove whitespaces from a string.
 
+
 8. Operators in PHP
 ---------------------
 Operators -> Arithmetic, Assignment, Comparison, Logical
+
 
 9. Loops in PHP
 ----------------
@@ -98,15 +105,18 @@ foreach($arr as $value){
     echo $value;
 }
 
+
 10. Functions in PHP
 ---------------------
 Piece of code that can be reused as many times as we want just by defining it and calling it whenever we need it.
+
 
 11. Dates in PHP
 ----------------
 date("") -> we have to provide strings to check date related values such as current date, time, get all of the info (date and time)
 
 date_default_timezone_set() -> It is used to set the current timezone we are in and sets the date and time according to it
+
 
 12. Associative Arrays in PHP
 ------------------------------
@@ -118,6 +128,7 @@ Ex : array("Remo" => "Drums", "Harsh" => "Piano")
 now use foreach($arr as $key => $value){
     // print the key and value of each array item
 }
+
 
 13. Multi Dimensional Arrays in PHP
 ------------------------------------
@@ -142,6 +153,7 @@ for($i = 0; $i < count($arr); $i++){
     echo "<br>";
 }
 
+
 14. Scope of Variables
 ----------------------
 Variables defined outside the function are global scoped variables.
@@ -150,6 +162,7 @@ Variables defined inside a function are local scoped variables.
 We can access the global variables inside the function by using global keyword and it converts the current local variable to global and also the changes done to that global variable will be affected for global scope (All over permanent change).
 
 All the global variables are stored in an Array known as $GLOBALS which is an array which has keys and values.
+
 
 15. GET and POST methods in PHP
 --------------------------------
@@ -163,3 +176,72 @@ Provide the name attribute to the input fields to access the values submitted :
 <input type="password" name = "password">
 
 $_POST["email"] $_POST["password"] to get the global values once we submit the form using POST method.
+
+
+16. SQL and RDBMS
+------------------
+Database is a place where all the informations are kept in an organised way so that it can easily be accessed, managed and updated.
+
+DBMS is a software that is used to interact with end users, applications, and the database itself to do various operations on data (CRUD). Eg : MySQL, PostgreSQL, SQ Lite
+
+MySQL is an open-source relational database management system (Database which stores data in table format). 
+Each table has some number of columns and rows and each columns has a name and type.
+
+SQL is a query programming language that is used as a medium to communicate with the Database by sending query.
+
+Then what is the Role of PHP ?
+
+-> A client requests a server for top 10 best street foods to try so the request will go to the server(PHP) now php will query to Database (MySQL) to fetch the data using SQL now the Database(MySQL) will return the request to the server(PHP) and server(PHP) returns the response to the client.
+
+
+17. phpMyAdmin
+---------------
+It is a web interface that helps us to communicate with our database. Communicating with Database(MySQL) through phpMyAdmin will make things easier.
+
+i. First we create a database (remo) then inside that db(remo) we will create a table (employees) which will store the data of every employee in the company.
+ii. We have to make a column (S.no, name, role, date of joining) and we can keep the S.iii. no auto-incremented and also it is a primary key (Unique data to identify)
+We can insert data inside those columns (row wise for per employee)
+
+
+18. Connecting MySQL and PHP
+-----------------------------
+Ways to connect to MySQL Database
+1. MySQLi extension -> Procedural and OOPS way 
+2. PDO (PHP Data Objects) -> Framework used for accessing db in PHP
+
+To connect to the database we need servername which will be localhost, username which is root and password will be according to the server but for now password shall be blank string while using Xampp.
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+
+Now we have to create a connection
+===================================
+$conn = mysqli_connect($servername, $username, $password);
+
+Now to check if the connection is done or not we can write :
+============================================================
+if(!$conn) echo "Server failed to connect " . mysqli_connect_error();
+else echo "Connection Successful"; 
+
+
+19. Create Database in MySQL 
+-----------------------------
+$db = "CREATE DATABASE remo";
+$result = mysqli_query($conn, $db);
+
+if($result) echo "DB is created Successfully";
+else echo mysqli_error($conn)
+
+20. Creating Table in MySQL
+----------------------------
+First specify the database
+$database = "remo";
+$conn = mysqli_connect($servername, $username, $password, $database);
+
+Then create table and send the query using php to MySQL
+Now check if table is there just send success otherwise send error message
+
+21. Inserting Data in MySQL
+----------------------------
+We can insert data in MySQL using the SQL query 

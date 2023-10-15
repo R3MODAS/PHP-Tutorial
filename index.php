@@ -78,6 +78,21 @@
         <li>
             <a href="./11_GET_POST.php">GET and POST Requests in PHP</a>
         </li>
+        <li>
+            <a href="./12_MySQL_PHP.php">MySQL and PHP</a>
+        </li>
+        <li>
+            <a href="./13_Create_Table_MySQL.php">Creating Table in MySQL</a>
+        </li>
+        <li>
+            <a href="./14_Insert_Data_MySQL.php">Inserting Data in MySQL</a>
+        </li>
+        <li>
+            <a href="./15_Form_MySQL.php">Form Submit in MySQL</a>
+        </li>
+        <li>
+            <a href="./16_Fetch_Data.php">Fetch Data in MySQL</a>
+        </li>
     </ul>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
