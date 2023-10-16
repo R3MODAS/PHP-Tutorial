@@ -48,20 +48,25 @@
         <?php
 
         if ($_SERVER["REQUEST_METHOD"] === "POST") {
+
+            //! Getting values from the Form
             $name = $_POST["name"];
             $email = $_POST["email"];
             $message = $_POST["message"];
 
+            //! Connecting to the Database (Info)
             $servername = "localhost";
             $username = "root";
             $password = "";
             $database = "form_db";
 
+            //! Creating a connection (Database and Server)
             $conn = mysqli_connect($servername, $username, $password, $database);
-
             if (!$conn) {
                 die("Sorry we failed to connect : " . mysqli_connect_error());
             } else {
+                
+                //! Insertion of Data in the Table
                 $insertData = "INSERT INTO `form` (`name`, `email`, `message`, `date`) VALUES ('$name', '$email', '$message', current_timestamp())";
                 $result = mysqli_query($conn, $insertData);
 

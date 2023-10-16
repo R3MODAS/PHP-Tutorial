@@ -215,15 +215,12 @@ $servername = "localhost";
 $username = "root";
 $password = "";
 
-Now we have to create a connection
-===================================
+Now We have to Create a Connection Between Database and Server =>
 $conn = mysqli_connect($servername, $username, $password);
 
-Now to check if the connection is done or not we can write :
-============================================================
+Now to check if the connection is done or not we can write => 
 if(!$conn) echo "Server failed to connect " . mysqli_connect_error();
 else echo "Connection Successful"; 
-
 
 19. Create Database in MySQL 
 -----------------------------
@@ -244,4 +241,22 @@ Now check if table is there just send success otherwise send error message
 
 21. Inserting Data in MySQL
 ----------------------------
-We can insert data in MySQL using the SQL query 
+We can insert data in MySQL using the SQL query then check if the data is Successfully inserted or not.
+First write a query to Insert the Data and store it inside a variable($InsertData).
+Then send the query to the Database using mysqli_query($conn, $fetchData).
+
+22. Fetching the Data in MySQL
+-------------------------------
+First write a query to get the Data and store it inside a variable($fetchData).
+Then send the query to the Database using mysqli_query($conn, $fetchData).
+Now the $result contains the data fetched from the Database now let's use it and see the Data.
+
+... To get the Number of rows in the table we can use => mysqli_num_rows($result);
+... To get the Data in the form of Associative Array we can use => mysqli_fetch_assoc($result) and
+store it inside $data variable as it returns a row of data inside the Table.
+... Now let's fetch the Data until it has a empty row
+
+    while($data = mysqli_fetch_assoc($result)){
+        // Keep fetching the Data until the row is empty (NULL)
+    }
+

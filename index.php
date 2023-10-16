@@ -93,6 +93,9 @@
         <li>
             <a href="./16_Fetch_Data.php">Fetch Data in MySQL</a>
         </li>
+        <li>
+            <a href="./17_Update_where_clause.php">Update and Where Clause in MySQL</a>
+        </li>
     </ul>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>

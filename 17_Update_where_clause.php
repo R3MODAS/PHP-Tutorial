@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>Fetch Data in MySQL</title>
+    <title>Update and Where Clause in MySQL</title>
     <style>
         h1 {
             font-size: 1.7rem;
@@ -38,46 +38,37 @@
     </nav>
 
     <div class="container mt-4">
-        <h1 class="fw-bolder">Fetch Data in MySQL</h1>
+        <h1 class="fw-bolder">Update and Where Clause in MySQL</h1>
 
         <?php
+        //! Connecting the Database 
         $servername = "localhost";
         $username = "root";
         $password = "";
         $database = "form_db";
 
+        //! Creating a connection with the Database 
         $conn = mysqli_connect($servername, $username, $password, $database);
 
         if (!$conn) echo "Server failed to connect " . mysqli_connect_error();
         else {
             echo "Connection is successful !!! <br>";
-            $fetchData = "SELECT * FROM `form`";
+            $fetchData = "SELECT * FROM `form` WHERE `sno` > 2";
             $result = mysqli_query($conn, $fetchData);
 
             if ($result) {
                 //! Fetching the Data from the Database
-
-                // to find the number of rows in the table
+                // To Find the number of rows in the table
                 $num = mysqli_num_rows($result);
                 echo "$num records were found !!! <br>";
 
-                // Display the rows returned
+                // Usage of WHERE Clause to fetch data from the DB
+                $no = 1;
                 if ($num > 0) {
-                    // $row = mysqli_fetch_assoc($result);
-                    // echo var_dump($row);
-                    // echo "<br>";
-                    // $row = mysqli_fetch_assoc($result);
-                    // echo var_dump($row);
-                    // echo "<br>";
-                    // $row = mysqli_fetch_assoc($result);
-                    // echo var_dump($row);
-                    // echo "<br>";
-                    // $row = mysqli_fetch_assoc($result);
-                    // echo var_dump($row);
-                    // echo "<br>";
                     echo "--- Here are the Data --- <br>";
                     while ($row = mysqli_fetch_assoc($result)) {
-                        echo $row['sno'] . " | " . $row["name"] . " | " . $row["email"] . " | " . $row["message"] . " | " . $row["date"] . "<br>";
+                        echo $no . " | " . $row["name"] . " | " . $row["email"] . " | " . $row["message"] . " | " . $row["date"] . "<br>";
+                        $no++;
                     }
                 }
             }
